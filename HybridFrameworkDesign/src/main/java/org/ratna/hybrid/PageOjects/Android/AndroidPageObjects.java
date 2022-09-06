@@ -9,7 +9,8 @@ import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 
 
-//This contains both locators and Action methods(Also the methods of AndroidActions class file as we are extending that class)
+//This class contains both locators and Action methods(Also the methods of AndroidActions class file as we are extending that class)
+//Similarly, we can create multiple page objects files for each page
 public class AndroidPageObjects extends AndroidActions
 
 {	
@@ -21,11 +22,9 @@ public class AndroidPageObjects extends AndroidActions
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-	//Defining locators Way1
+	//Defining locators Way1 (*RECOMMENDED - As the webelement is private, user cannot access anywhere other than creating a method/public method here in this class. Concept: Encapsulation))
 //	@AndroidFindBy(id="com.androidsample.generalstore:id/nameField")
 //	private WebElement fieldName;
-	
-	
 	//Defining Action method
 //	public void setField(String value)
 //	{
@@ -34,9 +33,9 @@ public class AndroidPageObjects extends AndroidActions
 //	}
 	
 	
-	
-	
 	//Defining locators Way2
 //	@AndroidFindBy(id="com.androidsample.generalstore:id/nameField")
 //	public WebElement nameField;
+	
+	
 }

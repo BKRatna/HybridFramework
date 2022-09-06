@@ -1,4 +1,4 @@
-package org.ratna.hybrid.TestFiles;
+package org.ratna.hybrid.TestFiles.Android;
 
 import java.io.File;
 import java.io.FileInputStream;
