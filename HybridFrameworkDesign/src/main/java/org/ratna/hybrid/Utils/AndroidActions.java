@@ -5,11 +5,12 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 //This class contains the re-usable Action methods like scroll,longpress etc
-public class AndroidActions {
+public class AndroidActions extends AppiumUtils{
 	
 	static AndroidDriver driver;
 	public AndroidActions(AndroidDriver driver)
 	{
+		super(driver);
 		this.driver=driver;
 	}
 	
