@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test thread-count="5" name="Android Tests">
+    <classes>
+      <class name="org.ratna.hybrid.TestFiles.Android.AndroidTestFile"/>
+    </classes>
+  </test> <!-- Test -->
+  
+  <test thread-count="5" name="iOS Tests">
+    <classes>
+      <class name="org.ratna.hybrid.TestFiles.iOS.iOSTestFile"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+<!--  We can maintain different testNG files one for each Android and iOS  -->

@@ -18,10 +18,12 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServiceBuilder;
 
+//@BeforeClass and @AfterClass will come in this class to Start the Appium Server and Stop the Appium Server
 public class Base {
 
 	public static AppiumDriverLocalService service;
 
+	
 	public AppiumDriverLocalService startServer() {
 		//
 		boolean flag = checkIfServerIsRunnning(4723);

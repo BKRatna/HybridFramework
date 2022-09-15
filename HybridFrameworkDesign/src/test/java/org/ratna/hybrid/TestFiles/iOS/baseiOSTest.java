@@ -10,6 +10,7 @@ import io.appium.java_client.remote.AutomationName;
 import io.appium.java_client.remote.IOSMobileCapabilityType;
 import io.appium.java_client.remote.MobileCapabilityType;
 
+//@BeforeClass and @AfterClass will come in this class to Start the Appium Server and Stop the Appium Server
 public class baseiOSTest {
 
 	public static IOSDriver DesiredCapabilities() throws MalformedURLException {
