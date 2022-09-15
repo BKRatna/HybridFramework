@@ -7,6 +7,7 @@ import javax.sound.midi.MidiDevice.Info;
 
 import org.ratna.hybrid.PageOjects.Android.AndroidPageObjects;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.android.Activity;
@@ -28,8 +29,8 @@ public class AndroidTestFile extends Base{
 	}
 	
 	
-	@Test
-	public void MethodName() throws IOException, InterruptedException {
+	@Test(dataProvider="getData")
+	public void MethodName(String name) throws IOException, InterruptedException { //In case of multiple values (String name,String gender,int age)
 		
 		service = startServer();
 		// TODO Auto-generated method stub
@@ -37,7 +38,13 @@ public class AndroidTestFile extends Base{
 		
 		AndroidPageObjects androidPageObjects = new AndroidPageObjects(driver);
 		
-		//androidPageObjects.setField("Ratna");
+		//androidPageObjects.setField(name);
+	}
+	
+	@DataProvider
+	public Object[][] getData()
+	{
+		return new Object[][] {{"Ratna"}}; //If multiple values needs to be passed then {{"Ratna","Female","30"}}
 	}
 	
 }
